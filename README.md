@@ -1,8 +1,8 @@
 # Dare Share
-This repo is created to compete with others in the unihack hackathon
+This repo is created by us to compete with others in the unihack hackathon
 
 ## Overview
-This website is created to post videos and pictures of htem doing a kinda action a day randomly during the day this website is inspired by 
+This website is created to post videos and pictures of htem doing a kinda action a day randomly during the day this website is inspired by the popular application bereal.
 
 Tech stacked used: react.js, css
 
