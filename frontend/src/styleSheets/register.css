@@ -35,30 +35,29 @@
 
 .form-group input:focus {
 	outline: none;
-	box-shadow: 0 0 10px rgba(121, 19, 168, 0.7); 
+	box-shadow: 0 0 10px rgba(121, 19, 168, 0.7);
 }
 
 .login-btn, .account-btn {
-  padding: 1rem;
-  width: 100%;
-  font-size: 1rem;
-  color: white;
-  background-color: #1e1e1e;
-	border: 5px solid rgb(121, 19, 168); 
-  border-radius: 100px;
-  text-decoration: none;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: 700;
-  cursor: pointer;
+	padding: 1rem;
+	width: 100%;
+	font-size: 1rem;
+	color: white;
+	background-color: #1e1e1e;
+	border: 5px solid rgb(121, 19, 168);
+	border-radius: 100px;
+	text-decoration: none;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+	margin-top: 1rem;
+	text-align: center;
+	font-weight: 700;
+	cursor: pointer;
 }
 
 .login-btn:hover, .account-btn:hover {
 	background-color: rgb(121, 19, 168);
 	box-shadow: 0 0 15px rgba(121, 19, 168, 0.7);
-
 }
 
 .account-btn {
