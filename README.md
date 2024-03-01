@@ -13,7 +13,7 @@ To explore and run this portfolio locally, follow these simple steps:
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:Arnold45202/MyPortfolio.git
+   git clone git@github.com:Arnold45202/DareShare.git
 2. Change into the directory 
    
    ```bash
