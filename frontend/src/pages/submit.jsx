@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import '../styleSheets/submit.css';
 import { useNavigate } from 'react-router-dom';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
