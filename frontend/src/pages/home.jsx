@@ -28,8 +28,9 @@ function Postify(post) {
 		<div className="post-grid">
 			<div className="post-owner">
 				<img src={pics[post.profile]} className="profile-pic"></img>
-				<div className='username'>
-					{post.user}
+				<div className='userinfo'>
+					<div className="username">{post.user}</div>
+					<div className="setting">{post.location}, {post.time} </div>
 				</div>
 			</div>
 			
@@ -46,8 +47,10 @@ function Postify(post) {
 			</div>
 
 			<div className="post-caption">
-				{post.caption}
+				{post.caption} <br></br>
+				<span className="bold">Dare: {post.dare}</span>
 			</div>
+
 
 			<div className="social-buttons">
 				<div className="social-button-info"><div className='icon'><FavoriteIcon /></div>{post.likes}</div>
