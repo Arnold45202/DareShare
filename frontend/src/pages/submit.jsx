@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import IconButton from '@mui/material/IconButton';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import Typography from '@mui/material/Typography';
 import '../styleSheets/submit.css';
 import { useNavigate } from 'react-router-dom';
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { renderTimeViewClock } from '@mui/x-date-pickers/timeViewRenderers';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import dayjs from 'dayjs';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 function Submit() {
   const navigate = useNavigate();
@@ -21,7 +20,7 @@ function Submit() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate('/homepage');
+    navigate('/home');
   }
 
   return (
@@ -31,13 +30,13 @@ function Submit() {
           src='https://cdn.discordapp.com/attachments/1207441349754884116/1213132242810052639/image.png?ex=65f45c71&is=65e1e771&hm=5f9ecb2b8953ef6622466df709a530a1ac65afe8aac34ec9e009f0e73c0e8221&'
           style={{ width: '70%', height: 'auto', display: 'block', margin: 'auto', marginBottom: '1rem' }}
         />
-        <Box sx={{ background: 'rgb(121, 19, 168)', borderRadius: '50px', textAlign: 'center', p: 1 }}>
+        <Box sx={{ background: 'rgb(121, 19, 168)', borderRadius: '10px', textAlign: 'center', p: 1 }}>
           <Typography variant='h4' color={'white'}>
-            Submit a dare!
+            SUBMIT A DARE
           </Typography>
         </Box>
 
-        <Box sx={{ mx: 2, textAlign: 'center', my: '2rem', backgroundColor: 'white', p: 2, borderRadius: '20px' }}>
+        <Box sx={{ mx: 0, textAlign: 'center', my: '2rem', backgroundColor: 'white', p: 1, borderRadius: '20px' }}>
           <TextField
             id='outlined-dare'
             size='large'
@@ -67,12 +66,12 @@ function Submit() {
                   // Specifically targeting the focused state label
                   color: 'rgb(121, 19, 168)', // Label color when the TextField is focused
                 },
-                width: '18rem',
+                width: '19rem',
               },
             }}
           />
         </Box>
-        <Box sx={{ mx: 2, textAlign: 'center', my: '2rem', backgroundColor: 'white', p: 2, borderRadius: '20px' }}>
+        <Box sx={{ mx: 0, textAlign: 'center', my: '2rem', backgroundColor: 'white', p: 1, borderRadius: '20px' }}>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <TimePicker
               label='Choose Time For Your Dare'
@@ -95,7 +94,7 @@ function Submit() {
                   '&.Mui-focused fieldset': {
                     borderColor: 'rgb(121, 19, 168)', // Border color when focused
                   },
-                  width: '18rem',
+                  width: '19rem',
                 },
               }}
               value={time}
@@ -103,15 +102,30 @@ function Submit() {
             />
           </LocalizationProvider>
         </Box>
-      </Box>
-
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: '3rem', mx: 2 }}>
-        <IconButton aria-label='delete' size='large' sx={{ color: 'white', p: 3 }} onClick={handleSubmit}>
+        <Box sx={{ mt: '3rem', mx: 0 }}>
+          {/* <IconButton aria-label='delete' size='large' sx={{ color: 'white', p: 3 }} >
           <HighlightOffIcon sx={{ fontSize: '8rem', color: 'red' }} />
         </IconButton>
         <IconButton aria-label='check' size='large' sx={{ color: 'white', p: 3 }} onClick={handleSubmit}>
           <CheckCircleOutlineIcon sx={{ fontSize: '8rem', color: 'green' }} />
-        </IconButton>
+        </IconButton> */}
+          <Button
+            variant='contained'
+            endIcon={<SendIcon />}
+            onClick={handleSubmit}
+            sx={{
+              backgroundColor: 'rgb(121, 19, 168)', // Button color
+              color: 'white', // Text color
+              '&:hover': {
+                backgroundColor: 'rgb(100, 19, 168)', // Button hover color
+              },
+              px: '9rem',
+              py: 2,
+              borderRadius: '10px',
+            }}>
+            Send
+          </Button>
+        </Box>
       </Box>
     </>
   );
