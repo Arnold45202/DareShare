@@ -10,6 +10,7 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import dayjs from 'dayjs';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import logo from '../assets/logo.png';
 
 function Submit() {
   const navigate = useNavigate();
@@ -25,10 +26,7 @@ function Submit() {
   return (
     <>
       <Box sx={{ pt: 2, px: 5, textAlign: 'center' }}>
-        <img
-          src='https://cdn.discordapp.com/attachments/1207441349754884116/1213132242810052639/image.png?ex=65f45c71&is=65e1e771&hm=5f9ecb2b8953ef6622466df709a530a1ac65afe8aac34ec9e009f0e73c0e8221&'
-          style={{ width: '70%', height: 'auto', display: 'block', margin: 'auto', marginBottom: '1rem' }}
-        />
+        <img src={logo} style={{ width: '70%', height: 'auto', display: 'block', margin: 'auto', marginBottom: '1rem' }} />
         <Box sx={{ background: 'rgb(121, 19, 168)', borderRadius: '10px', textAlign: 'center', p: 1 }}>
           <Typography variant='h4' color={'white'}>
             SUBMIT A DARE

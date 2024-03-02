@@ -39,7 +39,7 @@ const Leaderboard = () => {
         <br />
         <br />
         <Box sx={{ border: 2, borderColor: 'rgb(121, 19, 168)', borderRadius: '5px', p: 2, overflowY: 'auto', height: 370, pt: 0}}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-evenly', position: 'sticky', top: 0, backgroundColor: '#111111', pt:2, zIndex: 2 }}>
+          <Box sx={{ display: 'flex', justifyContent: 'space-evenly', position: 'sticky', top: 0, backgroundColor: '#272334', pt:2, zIndex: 2 }}>
             {option === 'Friends' ? (
               <Button key={Math.random()} variant='text' size='large'>
                 <Typography variant='h5' sx={{ color: 'white', textDecoration: 'underline', textUnderlineOffset: '10px' }}>

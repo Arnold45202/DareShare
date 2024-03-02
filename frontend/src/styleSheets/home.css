@@ -33,7 +33,7 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    background-color: #111111;
+    background-color: #272334;
     margin-left: auto;
     margin-right: auto;
     left:0;
@@ -65,121 +65,121 @@
   .transition-1 {
     height:3px;
     opacity: 0.05;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-2 {
     height:3px;
     opacity: 0.1;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-3 {
     height:3px;
     opacity: 0.15;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-4 {
     height:3px;
     opacity: 0.2;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-5 {
     height:3px;
     opacity: 0.25;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-6 {
     height:3px;
     opacity: 0.3;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-7 {
     height:3px;
     opacity: 0.35;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-8 {
     height:3px;
     opacity: 0.4;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-9 {
     height:3px;
     opacity: 0.45;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-10 {
     height:3px;
     opacity: 0.5;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-11 {
     height:3px;
     opacity: 0.55;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-12 {
     height:3px;
     opacity: 0.6;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-13 {
     height:3px;
     opacity: 0.65;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-14 {
     height:3px;
     opacity: 0.7;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-15 {
     height:3px;
     opacity: 0.75;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-16 {
     height:3px;
     opacity: 0.8;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-17 {
     height:3px;
     opacity: 0.85;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-18 {
     height:3px;
     opacity: 0.9;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-19 {
     height:3px;
     opacity: 0.95;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .transition-20 {
     height:30px;
     opacity: 1;
-    background-color: #111111;
+    background-color: #272334;
   }
 
   .upload-dare-button {
@@ -194,7 +194,7 @@
     padding-top: 2px;
     padding-bottom: 2px;
     color: white; 
-    background-color: #111111;
+    background-color: #272334;
     border: 5px solid rgb(121, 19, 168);
     border-radius: 10px; 
     text-decoration: none; 
