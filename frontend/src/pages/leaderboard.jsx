@@ -30,7 +30,7 @@ const Leaderboard = () => {
   return (
     <>
       <Box sx={{ pt: 2, px: 2, textAlign: 'center' }}>
-        <img src={logo} alt='' style={{ width: '45%', height: 'auto', display: 'block', margin: 'auto', marginBottom: '1rem' }} />
+        <img src={logo} alt='' style={{ width: '45%', height: 'auto', display: 'block', margin: 'auto'}} />
         <Box sx={{ p: 2 }}>
           <Typography variant='h4' sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
             TOP DAREDEVILS <img src={mask} alt='' style={{ width: '40px', height: '40px', position: 'relative', top: 7 }} />
