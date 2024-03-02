@@ -7,6 +7,7 @@ import Register from './pages/register';
 import Home from './pages/home';
 import Submit from './pages/submit';
 import Leaderboard from './pages/leaderboard'
+import Upload from './pages/upload';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/submit" element={<Submit />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/upload" element={<Upload />} /> 
       </Routes>
     </Router>
   );
