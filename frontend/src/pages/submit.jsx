@@ -55,26 +55,26 @@ function Submit() {
             sx={{
               '& .MuiInputBase-root': {
                 backgroundColor: '#272334',
+                color: 'white', // Set input text color to white
               },
               '& .MuiOutlinedInput-root': {
                 '& fieldset': {
                   borderColor: 'rgb(121, 19, 168)', // Default border color
                 },
                 '&:hover fieldset': {
-                  borderColor: 'rgb(121, 19, 168)', // Border color on hover (You can adjust this color)
+                  borderColor: 'rgb(121, 19, 168)', // Border color on hover
                 },
                 '&.Mui-focused fieldset': {
-                  borderColor: 'white', // Border color when focused
-                },
-                '& .MuiInputLabel-root': {
-                  // Targeting the label
-                  color: 'white', // Label color
-                },
-                '& .MuiInputLabel-root.Mui-focused': {
-                  // Specifically targeting the focused state label
-                  color: 'white', // Label color when the TextField is focused
+                  borderColor: 'rgb(121, 19, 168)', // Border color when focused
                 },
                 width: '19rem',
+              },
+              '& .MuiInputLabel-root': {
+                // Target the label
+                color: 'white', // Set label color to white
+              },
+              '& .Mui-focused': {
+                color: 'white', // Ensure the label color remains white when focused
               },
             }}
           />
@@ -137,7 +137,7 @@ function Submit() {
               '&:hover': {
                 backgroundColor: 'rgb(100, 19, 168)', // Button hover color
               },
-              px: '9rem',
+              px: '7.5rem',
               py: 2,
               borderRadius: '10px',
             }}>
