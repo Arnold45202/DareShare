@@ -75,7 +75,7 @@ function Home() {
 				Your DARE: Pay for someone's meal
 			</div>
 			<div className="upload-dare-button">
-				<Link to="/submit" className="upload-btn">UPLOAD YOUR DARE</Link>
+				<Link to="/submit" className="upload-btn"><p1>UPLOAD YOUR DARE</p1></Link>
 			</div>
 		</div>
 

@@ -45,6 +45,11 @@
     text-align: center;
     font-size: 24px;
     font-family: 'Roboto-Regular';
+    padding-bottom: 15px;
+    text-shadow: 0 0 10px rgb(133, 91, 189),
+    0 0 20px rgb(133, 91, 189),
+    0 0 60px rgb(133, 91, 189),;
+
   }
 
   .upload-dare {
@@ -191,25 +196,50 @@
   .upload-btn {
     font-family: 'Roboto-Regular';
     font-size: 24px; 
-    padding-top: 2px;
-    padding-bottom: 2px;
     color: white; 
     background-color: #272334;
-    border: 5px solid rgb(121, 19, 168);
-    border-radius: 10px; 
+    height: 7vh;
+    line-height: 7vh;
+    border: 2px solid rgb(121, 19, 168);
+    border-radius: 20px; 
     text-decoration: none; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
     text-align: center;
     font-weight: 600;
-    margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;;
     cursor: pointer;
   }
 
+  @keyframes animate {
+    0%{
+      background-position: 0%
+    }
+    100%{
+      background-position: 400%;
+    }
+  }
+
+  .upload-btn p1{
+    letter-spacing: 0.8vh;
+    font-weight: 800;
+    background: linear-gradient(90deg,rgb(160, 155, 231), rgb(121, 19, 168),rgb(226, 65, 145), rgb(212, 184, 211),rgb(160, 155, 231));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400%;
+    animation: animate 5s linear infinite;
+  }
+
+  .upload-btn:hover p1{
+    -webkit-text-fill-color: white;
+    animation:none;
+  }
   .upload-btn:hover {
-    background-color: rgb(121, 19, 168); 
-    box-shadow: 0 0 15px rgba(121, 19, 168, 0.7);
+    background: linear-gradient(90deg,rgb(160, 155, 231), rgb(121, 19, 168),rgb(121, 19, 168),rgb(226, 65, 145), rgb(212, 184, 211),rgb(160, 155, 231));
+    background-size: 400%;
+    animation: animate 5s linear infinite;    
+    border-color: #272334;
   }
 
 
