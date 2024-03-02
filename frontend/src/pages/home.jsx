@@ -28,16 +28,17 @@ function Postify(post) {
 		<div className="post-grid">
 			<div className="post-owner">
 				<img src={pics[post.profile]} className="profile-pic"></img>
-				<div className='username'>
-					{post.user}
+				<div className='userinfo'>
+					<div className="username">{post.user}</div>
+					<div className="setting">{post.location}, {post.time} </div>
 				</div>
 			</div>
 			
 			<div className="post-video">
 				{embedUrl && (
           <iframe
-            width="350"
-						height="450"
+            width="300"
+						height="280"
             src={embedUrl}
             title="YouTube video player"
             allowFullScreen
@@ -46,8 +47,10 @@ function Postify(post) {
 			</div>
 
 			<div className="post-caption">
-				{post.caption}
+				{post.caption} <br></br>
+				<span className="bold">Dare: {post.dare}</span>
 			</div>
+
 
 			<div className="social-buttons">
 				<div className="social-button-info"><div className='icon'><FavoriteIcon /></div>{post.likes}</div>
@@ -72,10 +75,10 @@ function Home() {
 			</div>
 
 			<div className="dare-info">
-				Dare #32: Pay for someone's meal
+				Your DARE: Pay for someone's meal
 			</div>
 			<div className="upload-dare-button">
-				<Link to="/submit" className="upload-btn">UPLOAD YOUR DARE</Link>
+				<Link to="/submit" className="upload-btn"><p1>UPLOAD YOUR DARE</p1></Link>
 			</div>
 		</div>
 

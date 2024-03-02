@@ -45,6 +45,11 @@
     text-align: center;
     font-size: 24px;
     font-family: 'Roboto-Regular';
+    padding-bottom: 15px;
+    text-shadow: 0 0 10px rgb(133, 91, 189),
+    0 0 20px rgb(133, 91, 189),
+    0 0 60px rgb(133, 91, 189),;
+
   }
 
   .upload-dare {
@@ -191,25 +196,50 @@
   .upload-btn {
     font-family: 'Roboto-Regular';
     font-size: 24px; 
-    padding-top: 2px;
-    padding-bottom: 2px;
     color: white; 
     background-color: #272334;
-    border: 5px solid rgb(121, 19, 168);
-    border-radius: 10px; 
+    height: 7vh;
+    line-height: 7vh;
+    border: 2px solid rgb(121, 19, 168);
+    border-radius: 20px; 
     text-decoration: none; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
     text-align: center;
     font-weight: 600;
-    margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;;
     cursor: pointer;
   }
 
+  @keyframes animate {
+    0%{
+      background-position: 0%
+    }
+    100%{
+      background-position: 400%;
+    }
+  }
+
+  .upload-btn p1{
+    letter-spacing: 0.8vh;
+    font-weight: 800;
+    background: linear-gradient(90deg,rgb(160, 155, 231), rgb(121, 19, 168),rgb(226, 65, 145), rgb(212, 184, 211),rgb(160, 155, 231));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400%;
+    animation: animate 5s linear infinite;
+  }
+
+  .upload-btn:hover p1{
+    -webkit-text-fill-color: white;
+    animation:none;
+  }
   .upload-btn:hover {
-    background-color: rgb(121, 19, 168); 
-    box-shadow: 0 0 15px rgba(121, 19, 168, 0.7);
+    background: linear-gradient(90deg,rgb(160, 155, 231), rgb(121, 19, 168),rgb(121, 19, 168),rgb(226, 65, 145), rgb(212, 184, 211),rgb(160, 155, 231));
+    background-size: 400%;
+    animation: animate 5s linear infinite;    
+    border-color: #272334;
   }
 
 
@@ -227,10 +257,10 @@
   .post-grid {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     border: 1px solid white;
-    border-radius: 20px;
-    padding-bottom: 20px;
+    border-radius: 50px;
+    padding-bottom: 10px;
   }
 
   .post-owner {
@@ -243,10 +273,17 @@
     display: flex;
     font-family: 'Roboto-Regular';
   }
+  .userinfo {
+    text-align: left;
+  }
 
   .username {
     font-size: 20px;
-    padding-top: 2px;
+    padding-top: 0px;
+  }
+
+  .setting {
+    font-size: 12px;
   }
 
   .profile-pic {
@@ -259,11 +296,27 @@
 
   .post-caption {
     padding-top: 0px;
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'Roboto-Thin';
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 300px;
+    text-wrap: wrap;
+  }
+
+  .bold {
+    font-weight: 800;
+  }
+
+  .post-dare {
+    padding-top: 0px;
+    font-size: 10px;
     font-weight: 100;
     font-family: 'Roboto-Thin';
     margin-left: 20px;
-    margin-right: auto;
+    margin-right: 20px;
   }
 
   .post-video {
@@ -271,6 +324,7 @@
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
+    
   }
 
   .social-buttons {
@@ -281,13 +335,13 @@
     padding-left: 20px;
     padding-right: 20px;
     border-top: 1px white solid;
-    margin-top: 30px;
+    margin-top: 10px;
   }
 
   .social-button-info {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size: 16px;
     align-content: center;
   }
 
@@ -297,6 +351,6 @@
   }
 
   .icon svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
