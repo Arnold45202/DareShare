@@ -37,7 +37,7 @@ function Postify(post) {
 				{embedUrl && (
           <iframe
             width="300"
-						height="300"
+						height="280"
             src={embedUrl}
             title="YouTube video player"
             allowFullScreen
