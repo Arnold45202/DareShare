@@ -19,7 +19,9 @@ function Login() {
 
   return (
     <div className="login-container">
-      <h1 className="login-title">Login</h1>
+      <div className="login-title">
+        Login
+      </div>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <input 
@@ -39,8 +41,10 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="login-btn">Login</button>
-        <Link to="/register" className="account-btn">Don't have an account? Sign up now!</Link>
+        <div className="button-group">
+          <button type="submit" className="login-btn">Login</button>
+          <Link to="/register" className="account-btn">Don't have an account? Sign up now!</Link>
+        </div>
       </form>
     </div>
   );

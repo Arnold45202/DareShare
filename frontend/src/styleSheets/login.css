@@ -5,24 +5,32 @@
 	justify-content: center;
 	height: 100vh;
 	background-color: #272334;
+	justify-content: flex-start;
+	max-width: 430px;
+	border: 1px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
 
 .login-title {
 	color: rgb(121, 19, 168);
-	font-size: 90px;
+	font-size: 30px;
 	font-family: Arial, Helvetica, sans-serif;
-	margin-bottom: 5rem;
+	margin-top: -50%;
 }
 
 .login-form {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	max-width: 400px;
+	width: 90%;
 }
 
 .form-group {
 	margin-bottom: 1rem;
+	width: 80%;
+	margin: auto;
 }
 
 .form-group input {
@@ -40,7 +48,7 @@
 
 .login-btn, .account-btn {
   padding: 1rem;
-  width: 100%;
+  width: 90%;
   font-size: 1rem;
   color: white;
   background-color: #1e1e1e;
@@ -68,6 +76,11 @@
 	margin-bottom: 1rem;
 	font-family: Arial, Helvetica, sans-serif;
 	width: 92%;
+}
+
+.button-group {
+	width: 80%;
+	margin: auto;
 }
 
 .account-btn:hover {
