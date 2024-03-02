@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import {React, useState } from 'react';
 import '../styleSheets/login.css'; 
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -40,7 +40,7 @@ function Login() {
           />
         </div>
         <div className="button-group">
-          <button type="submit" className="login-btn">Login</button>
+          <Link to="/home" className="account-btn">Login</Link>
           <Link to="/register" className="account-btn">Don't have an account? Sign up now!</Link>
         </div>
       </form>
