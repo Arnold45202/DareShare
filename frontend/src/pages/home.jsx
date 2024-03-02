@@ -3,6 +3,60 @@ import { useState, useEffect } from 'react'
 import '../styleSheets/home.css'
 import posts from '../assets/posts.json'
 import { Link } from 'react-router-dom';
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import ShareIcon from '@mui/icons-material/Share'
+import MessageIcon from '@mui/icons-material/Message'
+import pics from '../assets/profile-pics.json'
+import logo from '../assets/ds-logo.png'
+
+function Postify(post) {
+
+	const videoId = getYouTubeId(post.video);
+
+  // Function to extract YouTube video ID from URL
+  function getYouTubeId(url) {
+    // Regular expression to match YouTube video ID
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+    const match = url.match(regex);
+    return match && match[1];
+  }
+
+  // If videoId is available, create the YouTube embed URL
+  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?loop=1&modestbranding=1` : null;
+
+	return (
+		<div className="post-grid">
+			<div className="post-owner">
+				<img src={pics[post.profile]} className="profile-pic"></img>
+				<div className='username'>
+					{post.user}
+				</div>
+			</div>
+			
+			<div className="post-video">
+				{embedUrl && (
+          <iframe
+            width="300"
+						height="280"
+            src={embedUrl}
+            title="YouTube video player"
+            allowFullScreen
+          ></iframe>
+        )}
+			</div>
+
+			<div className="post-caption">
+				{post.caption}
+			</div>
+
+			<div className="social-buttons">
+				<div className="social-button-info"><div className='icon'><FavoriteIcon /></div>{post.likes}</div>
+				<div className="social-button-info"><div className='icon'><MessageIcon /></div>{post.comments}</div>
+				<div className="social-button-info"><div className='icon'><ShareIcon /></div>{post.shares}</div>
+			</div>
+		</div>
+	)
+}
 
 function Home() {
 	useEffect(() => {
@@ -14,15 +68,14 @@ function Home() {
 	<div className="container">
 		<div className="header">
 			<div>
-				<img src='https://cdn.discordapp.com/attachments/1207441349754884116/1213132242810052639/image.png?ex=65f45c71&is=65e1e771&hm=5f9ecb2b8953ef6622466df709a530a1ac65afe8aac34ec9e009f0e73c0e8221&' className="logo-home" />
+				<img src={logo} className="logo-home" />
 			</div>
 
 			<div className="dare-info">
-				Dare #32: Pay for someone's meal
+				Your DARE: Pay for someone's meal
 			</div>
 			<div className="upload-dare-button">
-				<Link to="/upload" className="upload-btn">Upload your DARE</Link>
-				
+				<Link to="/submit" className="upload-btn">UPLOAD YOUR DARE</Link>
 			</div>
 		</div>
 
@@ -50,26 +103,9 @@ function Home() {
 		</div>
 
 		<div className="posts-container"> 
-			{posts}
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
-			POSTS<br></br>
+			{posts.map(post => (
+				Postify(post)
+			))}
 		</div>
 	</div>
   )
