@@ -7,6 +7,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 import ShareIcon from '@mui/icons-material/Share'
 import MessageIcon from '@mui/icons-material/Message'
 import pics from '../assets/profile-pics.json'
+import logo from '../assets/ds-logo.png'
 
 function Postify(post) {
 
@@ -35,8 +36,8 @@ function Postify(post) {
 			<div className="post-video">
 				{embedUrl && (
           <iframe
-            width="350"
-						height="450"
+            width="300"
+						height="280"
             src={embedUrl}
             title="YouTube video player"
             allowFullScreen
@@ -67,11 +68,11 @@ function Home() {
 	<div className="container">
 		<div className="header">
 			<div>
-				<img src='https://cdn.discordapp.com/attachments/1207441349754884116/1213132242810052639/image.png?ex=65f45c71&is=65e1e771&hm=5f9ecb2b8953ef6622466df709a530a1ac65afe8aac34ec9e009f0e73c0e8221&' className="logo-home" />
+				<img src={logo} className="logo-home" />
 			</div>
 
 			<div className="dare-info">
-				Dare #32: Pay for someone's meal
+				Your DARE: Pay for someone's meal
 			</div>
 			<div className="upload-dare-button">
 				<Link to="/submit" className="upload-btn"><p1>UPLOAD YOUR DARE</p1></Link>

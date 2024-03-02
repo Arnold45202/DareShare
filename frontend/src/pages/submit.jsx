@@ -10,6 +10,8 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import dayjs from 'dayjs';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
+import logo from '../assets/logo.png';
+import { inputLabelClasses } from '@mui/material/InputLabel';
 
 function Submit() {
   const navigate = useNavigate();
@@ -25,17 +27,14 @@ function Submit() {
   return (
     <>
       <Box sx={{ pt: 2, px: 5, textAlign: 'center' }}>
-        <img
-          src='https://cdn.discordapp.com/attachments/1207441349754884116/1213132242810052639/image.png?ex=65f45c71&is=65e1e771&hm=5f9ecb2b8953ef6622466df709a530a1ac65afe8aac34ec9e009f0e73c0e8221&'
-          style={{ width: '70%', height: 'auto', display: 'block', margin: 'auto', marginBottom: '1rem' }}
-        />
-        <Box sx={{ background: 'rgb(121, 19, 168)', borderRadius: '10px', textAlign: 'center', p: 1 }}>
-          <Typography variant='h4' color={'white'}>
+        <img src={logo} style={{ width: '45%', height: 'auto', display: 'block', margin: 'auto', marginBottom: '1rem' }} />
+        <Box sx={{ textAlign: 'center', p: 1 }}>
+          <Typography variant='h4' color={'white'} sx={{ fontWeight: 'bold' }}>
             SUBMIT A DARE
           </Typography>
         </Box>
 
-        <Box sx={{ mx: 0, textAlign: 'center', my: '2rem', backgroundColor: 'white', p: 1, borderRadius: '20px' }}>
+        <Box sx={{ mx: 0, textAlign: 'center', my: '2rem' }}>
           <TextField
             id='outlined-dare'
             size='large'
@@ -43,9 +42,19 @@ function Submit() {
             variant='outlined'
             value={daretext}
             onChange={(e) => setDaretext(e.target.value)}
+            InputLabelProps={{
+              sx: {
+                // set the color of the label when not shrinked
+                color: 'white',
+                [`&.${inputLabelClasses.shrink}`]: {
+                  // set the color of the label when shrinked (usually when the TextField is focused)
+                  color: 'white',
+                },
+              },
+            }}
             sx={{
               '& .MuiInputBase-root': {
-                backgroundColor: 'white',
+                backgroundColor: '#272334',
               },
               '& .MuiOutlinedInput-root': {
                 '& fieldset': {
@@ -55,22 +64,22 @@ function Submit() {
                   borderColor: 'rgb(121, 19, 168)', // Border color on hover (You can adjust this color)
                 },
                 '&.Mui-focused fieldset': {
-                  borderColor: 'rgb(121, 19, 168)', // Border color when focused
+                  borderColor: 'white', // Border color when focused
                 },
                 '& .MuiInputLabel-root': {
                   // Targeting the label
-                  color: 'rgb(121, 19, 168)', // Label color
+                  color: 'white', // Label color
                 },
                 '& .MuiInputLabel-root.Mui-focused': {
                   // Specifically targeting the focused state label
-                  color: 'rgb(121, 19, 168)', // Label color when the TextField is focused
+                  color: 'white', // Label color when the TextField is focused
                 },
                 width: '19rem',
               },
             }}
           />
         </Box>
-        <Box sx={{ mx: 0, textAlign: 'center', my: '2rem', backgroundColor: 'white', p: 1, borderRadius: '20px' }}>
+        <Box sx={{ mx: 0, textAlign: 'center', my: '2rem' }}>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <TimePicker
               label='Choose Time For Your Dare'
@@ -81,26 +90,36 @@ function Submit() {
               }}
               sx={{
                 '& .MuiInputBase-root': {
-                  backgroundColor: 'white',
+                  backgroundColor: '#272334',
+                  color: 'white', // Set input text color to white
                 },
                 '& .MuiOutlinedInput-root': {
                   '& fieldset': {
                     borderColor: 'rgb(121, 19, 168)', // Default border color
                   },
                   '&:hover fieldset': {
-                    borderColor: 'rgb(121, 19, 168)', // Border color on hover (You can adjust this color)
+                    borderColor: 'rgb(121, 19, 168)', // Border color on hover
                   },
                   '&.Mui-focused fieldset': {
                     borderColor: 'rgb(121, 19, 168)', // Border color when focused
                   },
                   width: '19rem',
                 },
+                '& .MuiInputLabel-root': {
+                  // Target the label
+                  color: 'white', // Set label color to white
+                },
+                '& .Mui-focused': {
+                  color: 'white', // Ensure the label color remains white when focused
+                },
               }}
               value={time}
               onAccept={(newValue) => setTime(newValue)}
+              renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
         </Box>
+
         <Box sx={{ mt: '3rem', mx: 0 }}>
           {/* <IconButton aria-label='delete' size='large' sx={{ color: 'white', p: 3 }} >
           <HighlightOffIcon sx={{ fontSize: '8rem', color: 'red' }} />
