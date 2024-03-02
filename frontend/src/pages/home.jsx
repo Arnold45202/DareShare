@@ -6,8 +6,13 @@ import { Link } from 'react-router-dom';
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ShareIcon from '@mui/icons-material/Share'
 import MessageIcon from '@mui/icons-material/Message'
+import SettingsIcon from '@mui/icons-material/SettingsOutlined';
+import DevilIcon from '../assets/mask.png';
+import SearchIcon from '@mui/icons-material/Search';
+import LeaderboardIcon from '@mui/icons-material/EmojiEventsOutlined';
+import PersonIcon from '@mui/icons-material/PersonOutlined';
 import pics from '../assets/profile-pics.json'
-import logo from '../assets/ds-logo.png'
+import logo from '../assets/ds-logo.png';
 
 function Postify(post) {
 
@@ -22,7 +27,7 @@ function Postify(post) {
   }
 
   // If videoId is available, create the YouTube embed URL
-  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?loop=1&modestbranding=1` : null;
+  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?loop=1&modestbranding=1&autoplay=1&mute=1` : null;
 
 	return (
 		<div className="post-grid">
@@ -38,7 +43,7 @@ function Postify(post) {
 				{embedUrl && (
           <iframe
             width="300"
-						height="280"
+			height="280"
             src={embedUrl}
             title="YouTube video player"
             allowFullScreen
@@ -109,6 +114,14 @@ function Home() {
 			{posts.map(post => (
 				Postify(post)
 			))}
+		</div>
+
+		<div className="navigation">
+			<div><Link to="/home" className="navigation-btn"><SettingsIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/home" className="navigation-btn"><img src={DevilIcon} alt="" style={{height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/home" className="navigation-btn"><SearchIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/home" className="navigation-btn"><LeaderboardIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/home" className="navigation-btn"><PersonIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
 		</div>
 	</div>
   )

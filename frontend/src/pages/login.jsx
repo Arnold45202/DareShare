@@ -23,7 +23,7 @@ function Login() {
         Login
       </div>
       <form className="login-form" onSubmit={handleSubmit}>
-        <div className="form-group">
+        <div className="form-login-group">
           <input 
             type="email" 
             id="email" 
