@@ -118,9 +118,9 @@ function Home() {
 
 		<div className="navigation">
 			<div><Link to="/home" className="navigation-btn"><SettingsIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
-			<div><Link to="/home" className="navigation-btn"><img src={DevilIcon} alt="" style={{height: '40px', width: '40px'}}/></Link></div>
-			<div><Link to="/home" className="navigation-btn"><SearchIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
-			<div><Link to="/home" className="navigation-btn"><LeaderboardIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/upload" className="navigation-btn"><img src={DevilIcon} alt="" style={{height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/discover" className="navigation-btn"><SearchIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
+			<div><Link to="/leaderboard" className="navigation-btn"><LeaderboardIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
 			<div><Link to="/home" className="navigation-btn"><PersonIcon sx={{color: 'white', height: '40px', width: '40px'}}/></Link></div>
 		</div>
 	</div>
