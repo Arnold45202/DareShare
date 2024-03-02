@@ -63,16 +63,19 @@ function Upload() {
                         }}
                         ><CameraAltIcon sx = {{fontSize: 100}}/>
                         {activeRecordings.map(recording => (
-                            <div key={recording.id}>
-                            <video sx={{zIndex: 100, position: 'absolute',  top: 0, left: 0}} width = "320" height = "240" ref={recording.webcamRef} autoPlay muted />
-                              <video sx={{zIndex: 100,
-                            position: 'absolute',  top: 0, left: 0}} width = "320" height = "240" ref={recording.previewRef} autoPlay muted loop />
+                            <div style={{
+                                position: 'absolute',
+                                marginTop: '140px',
+                                zIndex: 1,
+                            }} key={recording.id} >
+                            <video width = "320" height = "240" ref={recording.webcamRef} autoPlay muted />
+                              <video position = 'absolute' width = "320" height = "240" ref={recording.previewRef} autoPlay muted loop />
                             </div>
                           ))}
                         </Button>
                     </Box>
                 <Typography variant='h4' sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold', fontSize: 15, top: 10}}>
-                    Take a picture
+                    Take a video
                 </Typography>
                     <Box sx = {{px : 4, py: 3}}>
                         <input accept="video/*" type="file" id = "select-image" style = {{display: 'none'}} />;
