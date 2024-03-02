@@ -1,6 +1,302 @@
-.logo-home {
-    width: 15%;
+  @font-face {
+    font-family: 'Roboto-Thin';
+    src: url('../assets/Roboto-Thin.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../assets/Roboto-Regular.ttf') format('truetype');
+  }
+  
+  .logo-home {
+    width: 130px;
     height: auto;
     margin: 0 auto; 
     display: block;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width:430px;
+    max-height: 932;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right:0;
+  }
+
+  .header {
+    max-width:400px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111111;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right:0;
+  }
+
+  .dare-info {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Roboto-Regular';
+  }
+
+  .upload-dare {
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  .transition-20-block {
+    width: 100%;
+    margin-top: 202px;
+    position: fixed;
+    display: block;
+    z-index: 999;
+    max-width:400px;
+  }
+
+  .transition-1 {
+    height:3px;
+    opacity: 0.05;
+    background-color: #111111;
+  }
+
+  .transition-2 {
+    height:3px;
+    opacity: 0.1;
+    background-color: #111111;
+  }
+
+  .transition-3 {
+    height:3px;
+    opacity: 0.15;
+    background-color: #111111;
+  }
+
+  .transition-4 {
+    height:3px;
+    opacity: 0.2;
+    background-color: #111111;
+  }
+
+  .transition-5 {
+    height:3px;
+    opacity: 0.25;
+    background-color: #111111;
+  }
+
+  .transition-6 {
+    height:3px;
+    opacity: 0.3;
+    background-color: #111111;
+  }
+
+  .transition-7 {
+    height:3px;
+    opacity: 0.35;
+    background-color: #111111;
+  }
+
+  .transition-8 {
+    height:3px;
+    opacity: 0.4;
+    background-color: #111111;
+  }
+
+  .transition-9 {
+    height:3px;
+    opacity: 0.45;
+    background-color: #111111;
+  }
+
+  .transition-10 {
+    height:3px;
+    opacity: 0.5;
+    background-color: #111111;
+  }
+
+  .transition-11 {
+    height:3px;
+    opacity: 0.55;
+    background-color: #111111;
+  }
+
+  .transition-12 {
+    height:3px;
+    opacity: 0.6;
+    background-color: #111111;
+  }
+
+  .transition-13 {
+    height:3px;
+    opacity: 0.65;
+    background-color: #111111;
+  }
+
+  .transition-14 {
+    height:3px;
+    opacity: 0.7;
+    background-color: #111111;
+  }
+
+  .transition-15 {
+    height:3px;
+    opacity: 0.75;
+    background-color: #111111;
+  }
+
+  .transition-16 {
+    height:3px;
+    opacity: 0.8;
+    background-color: #111111;
+  }
+
+  .transition-17 {
+    height:3px;
+    opacity: 0.85;
+    background-color: #111111;
+  }
+
+  .transition-18 {
+    height:3px;
+    opacity: 0.9;
+    background-color: #111111;
+  }
+
+  .transition-19 {
+    height:3px;
+    opacity: 0.95;
+    background-color: #111111;
+  }
+
+  .transition-20 {
+    height:30px;
+    opacity: 1;
+    background-color: #111111;
+  }
+
+  .upload-dare-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .upload-btn {
+    font-family: 'Roboto-Regular';
+    font-size: 24px; 
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: white; 
+    background-color: #111111;
+    border: 5px solid rgb(121, 19, 168);
+    border-radius: 10px; 
+    text-decoration: none; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+    text-align: center;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;;
+    cursor: pointer;
+  }
+
+  .upload-btn:hover {
+    background-color: rgb(121, 19, 168); 
+    box-shadow: 0 0 15px rgba(121, 19, 168, 0.7);
+  }
+
+
+  .posts-container {
+    padding-top: 220px;
+    color: white;
+    text-align: center;
+    font-size: 34px;
+    transition: opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .post-grid {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding-bottom: 20px;
+  }
+
+  .post-owner {
+    padding-top: 20px;
+    
+    align-content: left;
+    padding-left: 20px;
+    margin-right: auto;
+    font-weight: 1200;
+    display: flex;
+    font-family: 'Roboto-Regular';
+  }
+
+  .username {
+    font-size: 20px;
+    padding-top: 2px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-right: 15px;
+    padding-left: 5px;
+  }
+
+  .post-caption {
+    padding-top: 0px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Roboto-Thin';
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  .post-video {
+    outline: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .social-buttons {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px white solid;
+    margin-top: 30px;
+  }
+
+  .social-button-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-content: center;
+  }
+
+  .icon {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .icon svg {
+    width: 40px;
+    height: 40px;
   }
