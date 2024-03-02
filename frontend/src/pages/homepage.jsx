@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styleSheets/homepage.css'; 
+import '../styleSheets/homepage.css';
 import { Link } from 'react-router-dom'; // Make sure the import is correct
 import { useEffect } from 'react';
 
