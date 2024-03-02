@@ -8,6 +8,7 @@ import Home from './pages/home';
 import Discover from './pages/discover';
 import Submit from './pages/submit';
 import Leaderboard from './pages/leaderboard'
+import Upload from './pages/upload';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/discover" element={<Discover />} />
         <Route path="/submit" element={<Submit />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/upload" element={<Upload />} /> 
       </Routes>
     </Router>
   );
