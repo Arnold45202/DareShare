@@ -4,16 +4,43 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Icon from '@mui/material/Icon';
 import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import CollectionsIcon from '@mui/icons-material/Collections';
 import logo from '../assets/ds-logo.png';
 import { Button } from '@mui/material';
+import { useRecordWebcam } from 'react-record-webcam'
 
 
 
 function Upload() {
+    const {
+        activeRecordings,
+        createRecording,
+        openCamera,
+        startRecording,
+        stopRecording,
+      } = useRecordWebcam()
+    
+    const example = async () => {
+    try {
+        const recording = await createRecording();
+        if (!recording) return;
+        await openCamera(recording.id);
+        await startRecording(recording.id);
+        await new Promise((resolve) => setTimeout(resolve, 3000));
+        await stopRecording(recording.id);
+    } catch (error) {
+        console.error({ error });
+    }
+    };
+    
     function handleSubmit(event) {
         event.preventDefault();
         navigate('/home');
     }
+
+    const FileInput = () => {
+        <input accept="image/*" type="file" capture="environment" />;
+    };
 
 
     return (
@@ -30,22 +57,38 @@ function Upload() {
                 </Box>
                     <Box sx = {{px : 4}}>
                         <Button
-                        onClick = {handleSubmit}
-                        
+                        onClick = {example}
                         sx = {{
-                            color: 'white',
-                            transform: 'scale(4.0)',
-                            py: 0.5,
-                            px: 0.2,
-                            top: 12                   
+                            color: 'white',                
                         }}
-                        ><CameraAltIcon />
+                        ><CameraAltIcon sx = {{fontSize: 100}}/>
+                        {activeRecordings.map(recording => (
+                            <div key={recording.id}>
+                            <video sx={{zIndex: 100, position: 'absolute',  top: 0, left: 0}} width = "320" height = "240" ref={recording.webcamRef} autoPlay muted />
+                              <video sx={{zIndex: 100,
+                            position: 'absolute',  top: 0, left: 0}} width = "320" height = "240" ref={recording.previewRef} autoPlay muted loop />
+                            </div>
+                          ))}
                         </Button>
                     </Box>
-                <Typography variant = 'h8' sx = {{ color: 'white', textAlign: 'center'}}>
-                    Take a video
+                <Typography variant='h4' sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold', fontSize: 15, top: 10}}>
+                    Take a picture
                 </Typography>
-            
+                    <Box sx = {{px : 4, py: 3}}>
+                        <input accept="video/*" type="file" id = "select-image" style = {{display: 'none'}} />;
+                        <label htmlFor = "select-image">
+                            <Button
+                                component = "span"
+                                sx = {{
+                                    color: 'white',                
+                                }}
+                                ><CollectionsIcon sx = {{fontSize: 100}} />
+                            </Button>
+                        </label>
+                    </Box>
+                    <Typography variant='h4' sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold', fontSize: 15}}>
+                        Upload from your gallery
+                    </Typography>
             </Box>
         </>
     )
