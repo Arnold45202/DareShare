@@ -50,7 +50,7 @@ function Postify(post) {
       <div className='post-video'>{embedUrl && <iframe width='300' height='280' src={embedUrl} title='YouTube video player' allowFullScreen></iframe>}</div>
 
       <div className='post-caption'>
-        {post.caption} <br></br>
+        {post.user}: {post.caption} <br></br><br></br>
         <span className='bold'>Dare: {post.dare}</span>
       </div>
 
@@ -109,14 +109,14 @@ function Home() {
         </div>
 
         <div className='dare-info'>
-          <span className='dare-title'>Today's DARE</span>
+          <span className='dare-title'>TODAY's DARE</span>
           <br></br>
-          <span className='dare-mission' style={{ fontSize: '16px' }}>
-            Pay for someone's meal
+          <span className='dare-mission' style={{ fontSize: '16px', textWrap: "wrap" }}>
+            Invite a stranger to make a dance video! 💃
           </span>
         </div>
         <div className='upload-dare-button'>
-          <Link to='/submit' className='upload-btn'>
+          <Link to='/upload' className='upload-btn'>
             <p1>UPLOAD YOUR DARE</p1>
           </Link>
         </div>

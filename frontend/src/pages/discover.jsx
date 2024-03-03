@@ -90,7 +90,7 @@ const Discover = () => {
         <TextField
           id='outlined-dare'
           size='large'
-          label='Find another Daredevils!'
+          label='Find other Daredevils!'
           variant='outlined'
           value={daretext}
           onChange={(e) => setDaretext(e.target.value)}

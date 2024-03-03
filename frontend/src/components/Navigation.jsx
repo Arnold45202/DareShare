@@ -15,7 +15,7 @@ const Navigation = () => {
         </Link>
       </div>
       <div>
-        <Link to='/upload' className='navigation-btn'>
+        <Link to='/submit' className='navigation-btn'>
           <img src={DevilIcon} alt='' style={{ height: '40px', width: '40px', borderRadius: '12px' }} />
         </Link>
       </div>

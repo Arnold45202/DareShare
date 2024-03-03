@@ -26,14 +26,6 @@ function Upload() {
     }
   };
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    navigate('/home');
-  }
-
-  const FileInput = () => {
-    <input accept='image/*' type='file' capture='environment' />;
-  };
 
   return (
     <>
@@ -58,9 +50,9 @@ function Upload() {
                   marginTop: '140px',
                   zIndex: 1,
                 }}
-                key={recording.id}>
+                key={recording.id }>
                 <video width='320' height='240' ref={recording.webcamRef} autoPlay muted />
-                <video position='absolute' width='320' height='240' ref={recording.previewRef} autoPlay muted loop />
+                <video width='320' height='240' ref={recording.previewRef} autoPlay muted loop />
               </div>
             ))}
           </Button>
