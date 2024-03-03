@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import '../styleSheets/home.css';
 import logo from '../assets/logo.png';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -6,6 +7,7 @@ import { useState } from 'react';
 import { inputLabelClasses } from '@mui/material/InputLabel';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Navigation from '../components/Navigation';
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -84,7 +86,7 @@ const Discover = () => {
         <Typography variant='h4' sx={{ color: 'white', textAlign: 'center', fontWeight: 'bold' }}>
           GO ON A DAREVENTURE
         </Typography>
-				<br />
+        <br />
         <TextField
           id='outlined-dare'
           size='large'
@@ -129,11 +131,11 @@ const Discover = () => {
           }}
         />
         <br />
-				<br />
+        <br />
         <Typography variant='h6' sx={{ color: 'white', textAlign: 'center' }}>
           MOST LIKED DARES THIS WEEKS
         </Typography>
-        <ImageList sx={{ width: '100%', height: 350 }} variant='quilted' cols={4} rowHeight={121}>
+        <ImageList sx={{ width: '100%', height: 230 }} variant='quilted' cols={4} rowHeight={121}>
           {itemData.map((item) => (
             <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
               <img {...srcset(item.img, 121, item.rows, item.cols)} alt={item.title} loading='lazy' />
@@ -141,6 +143,7 @@ const Discover = () => {
           ))}
         </ImageList>
       </Box>
+      <Navigation />
     </>
   );
 };

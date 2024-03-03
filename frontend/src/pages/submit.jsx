@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import logo from '../assets/logo.png';
 import { inputLabelClasses } from '@mui/material/InputLabel';
+import Navigation from '../components/Navigation';
 
 function Submit() {
   const navigate = useNavigate();
@@ -145,6 +146,7 @@ function Submit() {
           </Button>
         </Box>
       </Box>
+      <Navigation />
     </>
   );
 }

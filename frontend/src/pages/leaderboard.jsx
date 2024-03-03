@@ -18,6 +18,7 @@ import ava10 from '../assets/ava10.png';
 import ava11 from '../assets/ava11.png';
 import ava12 from '../assets/ava12.png';
 import ava13 from '../assets/ava13.png';
+import Navigation from '../components/Navigation';
 
 const Leaderboard = () => {
   const [option, setOption] = useState('Friends');
@@ -76,6 +77,7 @@ const Leaderboard = () => {
               })}
         </Box>
       </Box>
+      <Navigation />
     </>
   );
 };
