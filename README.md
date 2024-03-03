@@ -8,7 +8,7 @@ Tech stacked used: react.js, css
 
 ## How to Run
 
-To explore and run this portfolio locally, follow these simple steps:
+To explore and run this website locally, follow these simple steps:
 
 1. Clone the repository:
 
